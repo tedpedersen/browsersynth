@@ -10,7 +10,7 @@
   <link rel="icon" href="http://whitenoise2.com/img/favicon.ico" type="image/x-icon" />
   <link href="https://fonts.googleapis.com/css?family=Bungee+Hairline" rel="stylesheet">
   <link href="synth.css" rel="stylesheet">
-<!-- 
+<!--
   <link rel="stylesheet" href="/styles.css?v=1.0"> --
 
   <!--[if lt IE 9]>
@@ -74,8 +74,8 @@ canvas{
   <select id="oscType" class="centered">
  <option value="sine">Sine</option>
  <option value="square">Square</option>
- <option value="sawtooth">Saw</option>  
-  <option value="triangle">Triangle</option>    
+ <option value="sawtooth">Saw</option>
+  <option value="triangle">Triangle</option>
 </select>
 
 
@@ -112,34 +112,34 @@ var HEIGHT = 300;
 
 
 
-document.getElementById("cNote").onclick = function playc () { 
+document.getElementById("cNote").onclick = function playc () {
 var osc = context.createOscillator(); // instantiate an oscillator
 osc.type =  document.getElementById("oscType").value;
 osc.frequency.setValueAtTime = 261.63; // Hz
 osc.frequency.value = 261.63; // Hz
 osc.connect(context.destination); // connect it to the destination
 osc.start(); // start the oscillator
-osc.stop(context.currentTime + .5); // stop 2 seconds after the current 
+osc.stop(context.currentTime + .5); // stop 2 seconds after the current
     osc.connect(analyser); /*Connect oscillator to analyser node*/
     analyser.connect(context.destination)
     draw();
 
 }
 
-document.getElementById("cNote2").onclick = function () { 
+document.getElementById("cNote2").onclick = function () {
 var osc = context.createOscillator(); // instantiate an oscillator
 osc.type =  document.getElementById("oscType").value;
 osc.frequency.setValueAtTime = 277.18; // Hz
 osc.frequency.value = 277.18; // Hz
 osc.connect(context.destination); // connect it to the destination
 osc.start(); // start the oscillator
-osc.stop(context.currentTime + .5); // stop 2 seconds after the current 
+osc.stop(context.currentTime + .5); // stop 2 seconds after the current
     osc.connect(analyser); /*Connect oscillator to analyser node*/
     analyser.connect(context.destination)
     draw();
 }
 
-document.getElementById("dNote").onclick = function () { 
+document.getElementById("dNote").onclick = function () {
 var osc = context.createOscillator(); // instantiate an oscillator
 osc.type =  document.getElementById("oscType").value;
 osc.frequency.setValueAtTime = 293.66; // Hz
@@ -153,7 +153,7 @@ osc.stop(context.currentTime + .5); // stop 2 seconds after the current
 
 }
 
-document.getElementById("dNote2").onclick = function () { 
+document.getElementById("dNote2").onclick = function () {
 var osc = context.createOscillator(); // instantiate an oscillator
 osc.type =  document.getElementById("oscType").value;
 osc.frequency.setValueAtTime = 311.13; // Hz
@@ -166,7 +166,7 @@ osc.stop(context.currentTime + .5); // stop 2 seconds after the current
     draw();
 }
 
-document.getElementById("eNote").onclick = function () { 
+document.getElementById("eNote").onclick = function () {
 var osc = context.createOscillator(); // instantiate an oscillator
 osc.type =  document.getElementById("oscType").value;
 osc.frequency.setValueAtTime = 329.63; // Hz
@@ -179,7 +179,7 @@ osc.stop(context.currentTime + .5); // stop 2 seconds after the current
     draw();
 }
 
-document.getElementById("fNote").onclick = function () { 
+document.getElementById("fNote").onclick = function () {
 var osc = context.createOscillator(); // instantiate an oscillator
 osc.type =  document.getElementById("oscType").value;
 osc.frequency.setValueAtTime = 349.23; // Hz
@@ -189,12 +189,26 @@ osc.start(); // start the oscillator
 osc.stop(context.currentTime + .5); // stop 2 seconds after the current
     osc.connect(analyser); /*Connect oscillator to analyser node*/
     analyser.connect(context.destination)
-    draw(); 
+    draw();
+}
+
+
+document.getElementById("fNote2").onclick = function () { 
+var osc = context.createOscillator(); // instantiate an oscillator
+osc.type =  document.getElementById("oscType").value;
+osc.frequency.setValueAtTime = 369.99; // Hz
+osc.frequency.value = 369.99; // Hz
+osc.connect(context.destination); // connect it to the destination
+osc.start(); // start the oscillator
+osc.stop(context.currentTime + .5); // stop 2 seconds after the current
+    osc.connect(analyser); /*Connect oscillator to analyser node*/
+    analyser.connect(context.destination)
+    draw();
 }
 
 
 
-document.getElementById("gNote").onclick = function playc2 () { 
+document.getElementById("gNote").onclick = function playc2 () {
 var osc = context.createOscillator(); // instantiate an oscillator
 osc.type =  document.getElementById("oscType").value;
 osc.frequency.setValueAtTime = 392.00; // Hz
@@ -204,59 +218,59 @@ osc.start(); // start the oscillator
 osc.stop(context.currentTime + .5); // stop 2 seconds after the current
     osc.connect(analyser); /*Connect oscillator to analyser node*/
     analyser.connect(context.destination)
-    draw(); 
+    draw();
 }
 
-document.getElementById("gNote2").onclick = function () { 
+document.getElementById("gNote2").onclick = function () {
 var osc = context.createOscillator(); // instantiate an oscillator
 osc.type =  document.getElementById("oscType").value;
 osc.frequency.setValueAtTime = 415.30; // Hz
 osc.frequency.value = 415.30; // Hz
 osc.connect(context.destination); // connect it to the destination
 osc.start(); // start the oscillator
-osc.stop(context.currentTime + .5); // stop 2 seconds after the current 
+osc.stop(context.currentTime + .5); // stop 2 seconds after the current
     osc.connect(analyser); /*Connect oscillator to analyser node*/
     analyser.connect(context.destination)
     draw();
 }
 
-document.getElementById("aNote").onclick = function () { 
+document.getElementById("aNote").onclick = function () {
 var osc = context.createOscillator(); // instantiate an oscillator
 osc.type =  document.getElementById("oscType").value;
 osc.frequency.setValueAtTime = 440.00; // Hz
-osc.frequency.value = 440.00; // Hz 
+osc.frequency.value = 440.00; // Hz
 osc.connect(context.destination); // connect it to the destination
 osc.start(); // start the oscillator
 osc.stop(context.currentTime + .5); // stop 2 seconds after the current
-    osc.connect(analyser); /*Connect oscillator to analyser node*/
-    analyser.connect(context.destination)
-    draw(); 
-}
-
-document.getElementById("aNote2").onclick = function () { 
-var osc = context.createOscillator(); // instantiate an oscillator
-osc.type =  document.getElementById("oscType").value;
-osc.frequency.setValueAtTime = 466.16; // Hz
-osc.frequency.value = 466.16; // Hz 
-osc.connect(context.destination); // connect it to the destination
-osc.start(); // start the oscillator
-osc.stop(context.currentTime + .5); // stop 2 seconds after the current 
     osc.connect(analyser); /*Connect oscillator to analyser node*/
     analyser.connect(context.destination)
     draw();
 }
 
-document.getElementById("bNote").onclick = function () { 
+document.getElementById("aNote2").onclick = function () {
 var osc = context.createOscillator(); // instantiate an oscillator
 osc.type =  document.getElementById("oscType").value;
-osc.frequency.setValueAtTime = 493.88; // Hz
-osc.frequency.value = 493.88; // Hz 
+osc.frequency.setValueAtTime = 466.16; // Hz
+osc.frequency.value = 466.16; // Hz
 osc.connect(context.destination); // connect it to the destination
 osc.start(); // start the oscillator
 osc.stop(context.currentTime + .5); // stop 2 seconds after the current
     osc.connect(analyser); /*Connect oscillator to analyser node*/
     analyser.connect(context.destination)
-    draw(); 
+    draw();
+}
+
+document.getElementById("bNote").onclick = function () {
+var osc = context.createOscillator(); // instantiate an oscillator
+osc.type =  document.getElementById("oscType").value;
+osc.frequency.setValueAtTime = 493.88; // Hz
+osc.frequency.value = 493.88; // Hz
+osc.connect(context.destination); // connect it to the destination
+osc.start(); // start the oscillator
+osc.stop(context.currentTime + .5); // stop 2 seconds after the current
+    osc.connect(analyser); /*Connect oscillator to analyser node*/
+    analyser.connect(context.destination)
+    draw();
 }
 
 var canvas = document.getElementById('canvas');
@@ -265,8 +279,8 @@ console.log(myCanvas);
 
 analyser.fftSize = 2048;
 
-var bufferLength = analyser.frequencyBinCount; 
-/*an unsigned long value half that of the FFT size. This generally equates to 
+var bufferLength = analyser.frequencyBinCount;
+/*an unsigned long value half that of the FFT size. This generally equates to
 the number of data values you will have to play with for the visualization*/
 
 var dataArray = new Uint8Array(bufferLength);
@@ -275,20 +289,20 @@ myCanvas.clearRect(0, 0, WIDTH, HEIGHT);
 
 function draw() {
   drawVisual = requestAnimationFrame(draw);
-  
+
   analyser.getByteTimeDomainData(dataArray);
-  
+
   myCanvas.fillStyle = "#000000";
   myCanvas.fillRect(0, 0, WIDTH, HEIGHT);
   myCanvas.lineWidth = 10;
   myCanvas.strokeStyle = "#fff";
   myCanvas.beginPath();
-  
+
   var sliceWidth = WIDTH * 1.0 / bufferLength;
   var x = 0;
-  
+
   for(var i = 0; i < bufferLength; i++) {
-   
+
         var v = dataArray[i] / 128.0;
         var y = v * HEIGHT/2;
 
@@ -300,7 +314,7 @@ function draw() {
 
         x += sliceWidth;
       };
-  
+
   myCanvas.lineTo(canvas.width, canvas.height/2);
       myCanvas.stroke();
 };
@@ -324,7 +338,7 @@ function draw() {
 //   console.log(WebMidi.time);
 
 
-  
+
 
 
 //   var akai = WebMidi.getInputByName("MPX8");
@@ -345,13 +359,13 @@ function draw() {
 
 //       osc.connect(context.destination); // connect it to the destination
 //       osc.start(); // start the oscillator
-//       osc.stop(context.currentTime + .5); // stop 2 seconds after the current 
+//       osc.stop(context.currentTime + .5); // stop 2 seconds after the current
 //           osc.connect(analyser); /*Connect oscillator to analyser node*/
 //           analyser.connect(context.destination)
 //     draw();
 //     console.log("Received 'noteon' message (" + e.note.name + e.note.octave + ").");
 //     }
-   
+
 //   );
 
 
