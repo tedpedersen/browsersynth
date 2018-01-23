@@ -193,7 +193,7 @@ osc.stop(context.currentTime + .5); // stop 2 seconds after the current
 }
 
 
-document.getElementById("fNote2").onclick = function () { 
+document.getElementById("fNote2").onclick = function () {
 var osc = context.createOscillator(); // instantiate an oscillator
 osc.type =  document.getElementById("oscType").value;
 osc.frequency.setValueAtTime = 369.99; // Hz
@@ -292,7 +292,7 @@ function draw() {
 
   analyser.getByteTimeDomainData(dataArray);
 
-  myCanvas.fillStyle = "#000000";
+  myCanvas.fillStyle = "#444";
   myCanvas.fillRect(0, 0, WIDTH, HEIGHT);
   myCanvas.lineWidth = 10;
   myCanvas.strokeStyle = "#fff";
